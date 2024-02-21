@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  font-family: 'open sans', sans-serif;
+}
+
+button {
+  cursor: pointer;
+  background-color: transparent;
+}
+
+header {
+  color: white;
+  padding: .5rem 1rem;
+}
+
+.menu-bar {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.menu-bar>div {
+  display: flex;
+  gap: 2rem;
+}
+
+.menu-bar>h2 {
+  font-size: large;
+  line-height: 2rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.pencil {
+  height: 1.1rem;
+  cursor: pointer;
+}
+
+header>p {
+  font-size: smaller;
+  line-height: 1.5rem;
+  color: rgba(255, 255, 255, 0.80);
+}
+
+.pane {
+  display: flex;
+  height: 50vh;
+}
+
+.output{
+  border-top: 1px solid white;
+}
+
+.editor-container {
+  flex-grow: 1;
+  flex-basis: 0;
+  display: flex;
+  flex-direction: column;
+  padding: .5rem;
+  background-color: transparent;
+}
+
+.editor-container.collapsed {
+  flex-grow: 0;
+}
+
+.editor-container.collapsed .CodeMirror-scroll {
+  position: absolute;
+  overflow: hidden !important;
+}
+
+.editor-title {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(95, 95, 95, 0.3);
+  color: white;
+  padding: .5rem .5rem .5rem 1rem;
+  border-top-right-radius: .5rem;
+  border-top-left-radius: .5rem;
+}
+
+.CodeMirror {
+  height: 100% !important;
+}
+
+.code-mirror-wrapper {
+  flex-grow: 1;
+  border-bottom-right-radius: .5rem;
+  border-bottom-left-radius: .5rem;
+  overflow: hidden;
+}
